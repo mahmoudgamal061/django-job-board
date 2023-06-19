@@ -36,9 +36,9 @@ def add_job(request):
             myform.save()
             return redirect(reverse('jobs:job_list'))
     else :
-        form = JobForm()
+        form1 = JobForm()
      
-    return render(request,'job/add_job.html',{'form': form})
+    return render(request,'job/add_job.html',{'form': form1})
     
     
   
