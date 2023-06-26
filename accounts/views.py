@@ -1,5 +1,6 @@
 from django.shortcuts import render ,redirect
 from .form import SignupForm
+from .models import Profile
 from django.contrib.auth import authenticate ,login
 # Create your views here.
 def signup(request):   
@@ -15,3 +16,12 @@ def signup(request):
     else:
         form=SignupForm()
     return render(request,'registration/signup.html',{'form':form})
+
+
+def profile(request):
+    profile=Profile.objects.get(user=request.user)
+    return render(request,'accounts/profile.html',{'profile':profile})
+
+
+def profile_edit(request):
+    pass

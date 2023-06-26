@@ -1,6 +1,6 @@
 from django.contrib import admin
-from . models import profile,city
-admin.site.register(profile)
-admin.site.register(city)
+from . models import Profile,City
+admin.site.register(Profile)
+admin.site.register(City)
 
 # Register your models here.
